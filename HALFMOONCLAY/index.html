@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Media Luna Clay — Manualidades y Joyería Indie</title>
+		<link rel="icon" href="Logo.png" />
+		<style>
+			:root{
+				--bg:#0b0b0d;
+				--card:#0f0f12;
+				--accent:#9b59ff;
+				--muted:#bdb8d6;
+				--shadow: 0 12px 30px rgba(155,89,255,0.08);
+				--radius:14px;
+				font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+			}
+			*{box-sizing:border-box}
+			body{margin:0;background:linear-gradient(180deg,var(--bg),#050506);color:#f5f5f7}
+			header{display:flex;align-items:center;gap:20px;padding:36px 48px}
+			.logo{width:128px;height:128px;border-radius:22px;overflow:hidden;flex:0 0 128px;box-shadow:0 18px 40px rgba(155,89,255,0.14);background:linear-gradient(180deg,#1a0f2a, #0b0810);display:grid;place-items:center}
+			.logo img{width:112px;height:112px;object-fit:contain}
+			h1{font-size:22px;margin:0;color:#fff}
+			p.lead{margin:6px 0 0;color:var(--muted);font-size:13px}
+			.container{max-width:1100px;margin:28px auto;padding:0 20px}
+
+			.hero{display:flex;align-items:center;justify-content:space-between;gap:22px;padding:24px;background:linear-gradient(90deg,rgba(155,89,255,0.06) 0%, rgba(0,0,0,0) 100%);border-radius:16px}
+			.hero-text{max-width:640px}
+			.hero h2{margin:0 0 8px;font-size:26px;color:var(--accent)}
+			.hero p{margin:0;color:var(--muted)}
+
+			.grid{display:flex;flex-direction:column;gap:24px;margin-top:22px}
+			.card{background:linear-gradient(180deg,#0e0d11,var(--card));border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:row;gap:18px;align-items:stretch}
+			.card img{width:40%;min-width:220px;height:320px;object-fit:cover;display:block}
+			.card .body{padding:18px 16px;display:flex;flex-direction:column;gap:10px;flex:1}
+			.description{color:var(--muted);font-size:14px;line-height:1.4;margin:4px 0 0}
+			.card h3{margin:0;font-size:18px;color:#fff}
+			.price{font-weight:700;color:var(--accent)}
+			.meta{display:flex;justify-content:space-between;align-items:center;margin-top:auto}
+			.btn{background:var(--accent);color:#0b0b0d;padding:10px 14px;border-radius:10px;border:0;cursor:pointer}
+			.btn.secondary{background:#18161b;color:var(--muted)}
+
+			footer{margin-top:30px;padding:18px;text-align:center;color:var(--muted);font-size:14px}
+
+						@media (max-width:900px){
+							.hero{flex-direction:column;align-items:flex-start}
+							header{padding:22px 20px}
+							.logo{width:96px;height:96px;flex:0 0 96px;border-radius:18px}
+							.logo img{width:80px;height:80px}
+							.card img{height:220px}
+						}
+
+						@media (max-width:600px){
+							header{padding:18px 16px}
+							.hero{gap:14px}
+							.logo{width:88px;height:88px;flex:0 0 88px;border-radius:16px}
+							.logo img{width:72px;height:72px}
+							.card{flex-direction:column;gap:12px}
+							.card img{width:100%;min-width:0;height:220px;object-fit:cover}
+							.card .body{padding:14px}
+							.btn{padding:12px 16px;font-size:15px}
+						}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="logo" aria-hidden>
+				<img src="imagenes/logoredondo.png" alt="Logo Media Luna Clay" />
+			</div>
+			<div>
+				<h1>Media Luna Clay</h1>
+				<p class="lead">Tienda de manualidades y joyería indie — piezas hechas con cariño.</p>
+			</div>
+		</header>
+
+		<main class="container">
+			<section class="hero" aria-labelledby="hero-title">
+				<div class="hero-text">
+					<h2 id="hero-title">Creaciones únicas para tus proyectos</h2>
+					<p>Encuentra materiales, adornos y piezas de joyería hechas a mano para tus ideas creativas. Envíos rápidos y empaques cuidados.</p>
+				</div>
+				<div>
+					<button class="btn" onclick="alert('Gracias por visitar Media Luna Clay!')">Ver novedades</button>
+				</div>
+			</section>
+
+			<section aria-labelledby="productos" style="margin-top:18px">
+				<h2 id="productos" style="margin:0 0 12px">Productos destacados</h2>
+				<div class="grid">
+					<article class="card">
+						<img src="imagenes/coronas.jpg" alt="Coronas decorativas" />
+						<div class="body">
+							<h3>Coronas decorativas</h3>
+							<p class="description">Coronas hechas a mano en arcilla polimérica con detalles dorados — perfectas para decoración y regalos con personalidad.</p>
+							<div class="meta">
+								<div class="price">35€</div>
+								<div>
+									<button class="btn" onclick="alert('Agregado: Coronas - 35€')">Comprar</button>
+								</div>
+							</div>
+						</div>
+					</article>
+
+					<article class="card">
+						<img src="imagenes/cosas.jpg" alt="Surtido de cosas para manualidades" />
+						<div class="body">
+							<h3>Surtido creativo</h3>
+							<p class="description">Kit variado con cuentas, colgantes y accesorios para tus proyectos DIY y joyería indie — ideal para inspirarte.</p>
+							<div class="meta">
+								<div class="price">29€</div>
+								<div>
+									<button class="btn" onclick="alert('Agregado: Cosas - 29€')">Comprar</button>
+								</div>
+							</div>
+						</div>
+					</article>
+
+					<article class="card">
+						<img src="imagenes/gatos.jpg" alt="Gatos de cerámica/artesanales" />
+						<div class="body">
+							<h3>Gatos artesanales</h3>
+							<p class="description">Figuras modeladas y esmaltadas a mano — piezas únicas con acabado delicado, ideales como adorno o pieza de colección.</p>
+							<div class="meta">
+								<div class="price">199€</div>
+								<div>
+									<button class="btn" onclick="alert('Agregado: Gatos - 199€')">Comprar</button>
+								</div>
+							</div>
+						</div>
+					</article>
+
+					<article class="card">
+						<img src="imagenes/galletasdelasuerte.png" alt="Galletas de la suerte" />
+						<div class="body">
+							<h3>Galletas de la suerte</h3>
+							<p class="description">Mini amuletos inspirados en las galletas de la suerte, con mensajes personalizados para regalar o decorar.</p>
+							<div class="meta">
+								<div class="price">29€</div>
+								<div>
+									<button class="btn" onclick="alert('Agregado: Galletas de la suerte - 29€')">Comprar</button>
+								</div>
+							</div>
+						</div>
+					</article>
+
+					<article class="card">
+						<img src="imagenes/girasolesespirituales.png" alt="Girasoles espirituales" />
+						<div class="body">
+							<h3>Girasoles espirituales</h3>
+							<p class="description">Adornos con motivos de girasol y símbolos espirituales, pensados para altares, rincones de meditación y decoración con significado.</p>
+							<div class="meta">
+								<div class="price">35€</div>
+								<div>
+									<button class="btn" onclick="alert('Agregado: Girasoles espirituales - 35€')">Comprar</button>
+								</div>
+							</div>
+						</div>
+					</article>
+
+					<article class="card">
+						<img src="imagenes/rosainvernal.png" alt="Rosas invernales" />
+						<div class="body">
+							<h3>Rosas invernales</h3>
+							<p class="description">Piezas delicadas con acabado 'helado' y paleta fría — perfectas para looks invernales y regalos elegantes.</p>
+							<div class="meta">
+								<div class="price">29€</div>
+								<div>
+									<button class="btn" onclick="alert('Agregado: Rosas invernales - 29€')">Comprar</button>
+								</div>
+							</div>
+						</div>
+					</article>
+
+				</div>
+			</section>
+
+			<footer>
+				<div>Contacto: <strong>covatronka3000@gmail.com</strong> • Síguenos en Instagram: <em>medialuna_clay</em></div>
+			</footer>
+		</main>
+	</body>
+</html>
